@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Code:300,400,500,600,700&display=swap&subset=cyrillic');
 
 :root {
-  --light-gray: rgba(0, 0, 0, 0.25);
   --accent-color: #0038FF;
+  --light-gray: rgba(0, 0, 0, .25);
+  --dark-gray: rgba(0, 0, 0, .5);
 }
+
 body {
   font-family: 'Fira Code', monospace;
   -webkit-font-smoothing: antialiased;
@@ -11,6 +13,7 @@ body {
   background-color: #FDFFF8;
   box-sizing: border-box;
 }
+
 main {
   width: 600px;
   min-height: 100vh;
@@ -19,6 +22,11 @@ main {
   border-right: 1px solid var(--light-gray);
   padding-bottom: 20vh;
 }
+
+li {
+  list-style: none;
+}
+
 .main__header {
   font-size: 18px;
   font-weight: bold;
@@ -28,43 +36,53 @@ main {
   align-items: center;
   border-bottom: 1px solid var(--light-gray);
 }
+
 .tweet {
   display: flex;
   padding: 24px 32px 16px 24px;
   border-bottom: 1px solid var(--light-gray);
 }
+
 .tweet__ava {
   width: 56px;
   height: 56px;
   margin-right: 16px;
 }
+
 .tweet__body__header {
   display: flex;
   align-items: center;
 }
+
 .tweet__body__header * {
   margin-right: 16px;
 }
+
 .tweet__body__header h3 {
   font-size: 16px;
   font-weight: bold;
 }
+
 .tweet__body__header a {
   font-size: 14px;
-  color: rgba(0, 0, 0, .5);
+  color: var(--dark-gray);
   text-decoration: none;
 }
+
 .tweet__body__header a:hover {
   text-decoration: underline;
 }
+
 .tweet__body p {
   font-size: 16px;
   line-height: 24px;
   padding: 8px 0 16px;
 }
+
 .tweet__body__actions {
   display: flex;
 }
+
 .tweet__body__actions li {
   margin-right: 84px;
   font-size: 14px;
@@ -73,11 +91,11 @@ main {
   align-items: center;
   position: relative;
 }
+
 .tweet__body__actions li span {
   position: absolute;
   left: 28px;
 }
-
 
 /*
   Навигация
@@ -89,6 +107,7 @@ nav {
   transform: translateX(-100%);
   padding: 24px 32px 0 0;
 }
+
 .nav__menu li a {
   display: inline-flex;
   align-items: center;
@@ -99,44 +118,98 @@ nav {
   color: inherit;
   border-radius: 50px;
 }
+
 .nav__menu li:hover a {
   background: rgba(0, 0, 0, 0.05);
   color: var(--accent-color);
 }
+
 .nav__menu__icon {
   width: 28px;
   height: 28px;
   background: rgb(0,0,0);
   margin-right: 16px;
 }
+
 .nav__menu li:hover .nav__menu__icon {
   background: var(--accent-color);
 }
+
 .nav__menu__icon--home {
   mask: url(../img/home-icn.svg);
   -webkit-mask: url(../img/home-icn.svg);
 }
+
 .nav__menu__icon--bell {
   mask: url(../img/bell-icn.svg);
   -webkit-mask: url(../img/bell-icn.svg);
 }
+
 .nav__menu__icon--chat {
   mask: url(../img/chat-icn.svg);
   -webkit-mask: url(../img/chat-icn.svg);
 }
+
 .nav__menu__icon--bookmark {
   mask: url(../img/bookmark-icn.svg);
   -webkit-mask: url(../img/bookmark-icn.svg);
 }
 
-nav__btn a {
-  background-color:
+.nav__btn {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: var(--accent-color);
+  padding: 16px 55px;
   text-decoration: none;
-  box-shadow:
+  margin-top: 32px;
+  display: block;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
+  text-align: center;
 }
 
-nav__btn:hover {
-  background-color:
+.nav__btn:hover {
+  filter: brightness(1.25);
+}
+
+/*
+Друзья
+ */
+
+aside {
+  background: rgba(25, 25, 25, 0.05);
+  border-radius: 12px;
+  width: 320px;
+}
+
+aside li {
+  display: flex;
+}
+
+aside li:first-child {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+aside li {
+  padding: 8px 16px;
+}
+
+aside img {
+  width: 40px;
+  padding-right: 8px;
+}
+
+aside li:not(:last-child) {
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.user__info__nick {
+  font-size: 14px;
+  color: var(--dark-gray);
   text-decoration: none;
-  box-shadow:
+}
+
+.user__info__nick:hover {
+  text-decoration: underline;
 }
