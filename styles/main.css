@@ -27,9 +27,27 @@ li {
   list-style: none;
 }
 
-.main__header {
-  font-size: 18px;
+h2 {
   font-weight: bold;
+  font-size: 18px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+a {
+  font-size: 14px;
+  color: var(--dark-gray);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.main__header {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -56,21 +74,6 @@ li {
 
 .tweet__body__header * {
   margin-right: 16px;
-}
-
-.tweet__body__header h3 {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.tweet__body__header a {
-  font-size: 14px;
-  color: var(--dark-gray);
-  text-decoration: none;
-}
-
-.tweet__body__header a:hover {
-  text-decoration: underline;
 }
 
 .tweet__body p {
@@ -191,10 +194,6 @@ aside li:first-child {
   font-size: 18px;
 }
 
-aside li {
-  padding: 8px 16px;
-}
-
 aside img {
   width: 40px;
   padding-right: 8px;
@@ -210,6 +209,18 @@ aside li:not(:last-child) {
   text-decoration: none;
 }
 
-.user__info__nick:hover {
+.user__info__nick:hover,
+aside li:last-child:hover {
   text-decoration: underline;
+}
+
+aside li:last-child {
+  color: var(--accent-color);
+  font-size: 14px;
+}
+
+aside li {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
 }
