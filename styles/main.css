@@ -167,7 +167,7 @@ nav {
   text-decoration: none;
   margin-top: 32px;
   display: block;
-  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 6px 6px 0 var(--light-gray);
   text-align: center;
 }
 

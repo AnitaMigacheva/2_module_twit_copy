@@ -1,5 +1,6 @@
 .wrapper {
   display: flex;
+
 }
 
 .messages {
@@ -57,13 +58,13 @@
 }
 
 .chat__msg {
-  padding: 16px;
+  padding: 16px 16px 8px;
   display: flex;
   flex-direction: column;
 }
 
 .chat__msg img {
-  padding: 0 16px;
+  padding-right: 16px;
   width: 32px;
   height: 32px;
   align-self: flex-end;
@@ -82,10 +83,19 @@
   line-height: 1.5em;
 }
 
+.chat__msg__sent {
+  align-items: flex-end;
+}
+
 .chat__msg__sent p {
   background: var(--accent-color);
   border-radius: 24px 24px 0px 24px;
   color: #fff;
+}
+
+.chat__msg__received {
+  display: flex;
+  flex-direction: row;
 }
 
 .chat__msg__received p {
@@ -93,6 +103,32 @@
   border-radius: 24px 24px 24px 0px;
 }
 
-.chat__msg__sent  {
-  align-items: flex-end;
+input::placeholder {
+  color: rgba(0, 0, 0, 0.25);
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  padding-left: 16px;
+}
+
+input::-webkit-input-placeholder {
+}
+input::-moz-placeholder {
+}
+input:-ms-input-placeholder {
+}
+input::-ms-input-placeholder {
+
+}
+
+.chat__footer {
+  border-top: 1px solid var(--light-gray);
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input {
+  border: none;
+  height: 56px;
+  width: 80%;
 }
