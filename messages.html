@@ -4,45 +4,44 @@
   <meta charset="utf-8">
   <title>Высказатор 9000</title>
   <link rel="stylesheet" href="styles/stylesheets.css">
+  <link rel="stylesheet" href="styles/messages.css">
 </head>
 <body>
+  <nav>
+    <ul class="nav__menu">
+      <li>
+        <a href="index.html">
+          <div class="nav__menu__icon nav__menu__icon--home"></div>
+          Главная
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="nav__menu__icon nav__menu__icon--bell"></div>
+          Уведомления
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="nav__menu__icon nav__menu__icon--chat"></div>
+          Сообщения
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="nav__menu__icon nav__menu__icon--bookmark"></div>
+          Закладки
+        </a>
+      </li>
+    </ul>
+    <a href="#" class="nav__btn">Высказаться</a>
+  </nav>
   <div class="wrapper">
-    <nav>
-      <ul class="nav__menu">
-        <li>
-          <a href="index.html">
-            <div class="nav__menu__icon nav__menu__icon--home"></div>
-            Главная
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="nav__menu__icon nav__menu__icon--bell"></div>
-            Уведомления
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="nav__menu__icon nav__menu__icon--chat"></div>
-            Сообщения
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="nav__menu__icon nav__menu__icon--bookmark"></div>
-            Закладки
-          </a>
-        </li>
-      </ul>
-      <a href="#" class="nav__btn">Высказаться</a>
-    </nav>
-
     <div class="messages">
       <header class="msg__header">
         <h2>Сообщения</h2>
         <img src="img/new-msg-icn.svg" alt="Иконка сообщения">
       </header>
-
       <div class="msg">
         <img class="msg__ava" src="img/ava-vasya.png" alt="Аватарка пользователя">
         <div class="msg__body">
@@ -54,7 +53,6 @@
           <p>Привет, киберстранник. Настала пор...</p>
         </div>
       </div>
-
       <div class="msg">
         <img class="msg__ava" src="img/ava-dale.png" alt="Аватарка пользователя">
         <div class="msg__body">
@@ -66,7 +64,6 @@
           <p>Открою тебе маленький секрет. Кажд...</p>
         </div>
       </div>
-
       <div class="msg">
         <img class="msg__ava" src="img/ava-inna.png" alt="Аватарка пользователя">
         <div class="msg__body">
@@ -79,13 +76,11 @@
         </div>
       </div>
     </div>
-
     <div class="chat">
       <header class="chat__header">
         <h2>Агент Д</h2>
         <a href="#">@win-twin</a>
       </header>
-
       <ul class="chat__messages">
         <li class="chat__msg chat__msg__sent">
           <p>
@@ -93,15 +88,14 @@
           </p>
           <span class="chat__msg__date">11 октября, 12:00</span>
         </li>
-
         <li class="chat__msg chat__msg__received">
-            <img src="img/ava-dale.png" alt="">
-            <div>
+          <img src="img/ava-dale.png" alt="">
+          <div>
             <p>
             Открою тебе маленький секрет. Каждый день, раз в день, делай себе маленький подарок. Не планируй заранее, не жди его, просто пусть он случается. Это может быть новая рубашка или послеобеденный сон в кабинете, или две чашки хорошего, горячего, черного кофе.
             </p>
-          <span class="chat__msg__date">11 октября, 16:40</span>
-            </div>
+            <span class="chat__msg__date">11 октября, 16:40</span>
+          </div>
         </li>
       </ul>
       <footer class="chat__footer">
@@ -110,5 +104,4 @@
       </footer>
     </div>
   </div>
-
 </body>
