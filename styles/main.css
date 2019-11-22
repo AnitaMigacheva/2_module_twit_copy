@@ -236,11 +236,15 @@ aside li {
 
 @media (max-width: 1024px) {
   nav {
-    left: calc((100vw - 750px) / 2);
+    /* left: calc((100vw - 750px) / 2);
     padding: 16px 4px 0 0;
     transform: translateX(-250%);
-    left: calc((100vw - 840px) / 2);
+    left: calc((100vw - 840px) / 2); */
+    transform: none;
+    padding: 0;
+    left: 20px;
   }
+
   nav span {
     display: none;
   }
@@ -277,6 +281,32 @@ aside li {
   main {
     margin: 0;
   }
+  .nav__menu__icon--home {
+    mask: url(../img/home-icn-small.svg);
+    -webkit-mask: url(../img/home-icn-small.svg);
+  }
+  .nav__menu__icon--bell {
+    mask: url(../img/bell-icn-small.svg);
+    -webkit-mask: url(../img/bell-icn-small.svg);
+  }
+  .nav__menu__icon--chat {
+    mask: url(../img/chat-icn-small.svg);
+    -webkit-mask: url(../img/chat-icn-small.svg);
+  }
+  .nav__menu__icon--bookmark {
+    mask: url(../img/bookmark-icn-small.svg);
+    -webkit-mask: url(../img/bookmark-icn-small.svg);
+  }
+  .nav__menu__icon--home,
+  .nav__menu__icon--bell,
+  .nav__menu__icon--chat,
+  .nav__menu__icon--bookmark {
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+  }
+  .nav__menu li:hover a {
+    background: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -289,16 +319,9 @@ aside li {
   }
   .wrapper {
     justify-content: center;
-    padding-top: 90px;
   }
   .nav__btn {
     margin-top: 16px;
-  }
-  .nav__menu li:hover a {
-    background: none;
-  }
-  .main__header {
-    display: none;
   }
 }
 
@@ -306,14 +329,20 @@ aside li {
   nav {
     left: 0;
     border-bottom: 1px solid var(--light-gray);
+    background-color: #FDFFF8;
+    z-index: 1;
   }
   .wrapper {
     margin: 0;
+    padding-top: 90px;
   }
   main {
     width: 100vw;
     border-right: none;
     border-left: none;
+  }
+  .main__header {
+    display: none;
   }
   .tweet {
     padding: 16px;
@@ -326,6 +355,12 @@ aside li {
   .tweet__body__header {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .tweet__body__header div {
+    padding-top: 4px;
+  }
+  .tweet__body__header div a {
+    margin-right: 6px;
   }
   .tweet__body p {
     font-size: 14px;
@@ -342,9 +377,20 @@ aside li {
     justify-content: space-around;
     width: 100vw;
   }
+  .nav__menu__icon {
+    margin-right: 0;
+  }
+  nav ul li {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li:hover {
+    border-bottom: 2px solid var(--accent-color);
+  }
   nav h2 {
     display: block;
-    padding-left: 16px;
+    padding: 12px 0 0 16px;
   }
   .main__header img {
     display: none;
@@ -353,6 +399,8 @@ aside li {
     position: fixed;
     width: 56px;
     height: 56px;
+    bottom: 32px;
+    right: 24px;
   }
   .nav__btn__icn {
     width: 28px;
